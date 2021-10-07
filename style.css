@@ -1,0 +1,283 @@
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0rem;
+    padding: 0rem;
+    height: 100vh;
+    background: linear-gradient(to left top, #962D2D, white);
+}
+
+
+/*Main*/
+
+main {
+    /*padding-top: 1rem;*/
+    /*padding-bottom: 1rem;*/
+    width: 100%;
+    /*margin: auto;*/
+    display: flex;
+    flex-direction: column;
+}
+
+.icon {
+    display: flex;
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
+.background-box {
+    width: 40px;
+    height: 40px;
+    background: #a35709;
+    font-size: 1.7rem;
+    font-family: 'Satisfy', cursive;
+    text-align: center;
+    color: #f0e3ca;
+    border-radius: 4px;
+}
+
+.icon p{
+    margin: 0;
+    font-size: 1.7rem;
+    font-family: 'Satisfy', cursive;
+    padding-left: 0.1rem;
+    padding-top: 0.25rem;
+    color: #a35709;
+}
+
+.calculator-container {
+    background-color: #ff8303;
+    margin-top: 5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding-top: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.output-screen {
+    height: 100px;
+    background-color: #1b1a17;
+    border-radius: 20px;
+    box-shadow: inset 0 0 20px 0 rgb(99, 98, 98);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 1.5rem;
+    font-family: 'Orbitron', sans-serif;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output-screen .first-operand {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.2rem;
+}
+
+.output-screen .second-operand {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.calculator-buttons {
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+    }
+
+
+.calculator-buttons > button{
+    outline: none;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: 1.2em;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+}
+
+.calculator-buttons > button:hover {
+    background-color: #f0e3ca;
+}
+
+.equal-button {
+    grid-area: 3/4/6/5;
+}
+
+
+
+/*Footer*/
+
+
+footer {
+    bottom: 0;
+    height: 2rem;
+    width: 100%;
+    position: fixed;
+    padding-left: 1rem;
+    display: flex;
+}
+
+footer p {
+    margin: 0;
+    color: #a3560985;
+}
+
+.link-icons {
+    position: fixed;
+    right: 15px;
+}
+
+.link-icons a {
+    text-decoration: none;
+    color: #a3560985;
+}
+
+.link-icons a:hover {
+    cursor: pointer;
+    color: #a35709;
+}
+
+.link-icons i {
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+}
+
+/*
+f0e3ca
+ff8303
+a35709
+1b1a17
+font-family: 'ZCOOL KuaiLe', cursive;
+font-family: 'Satisfy', cursive;
+font-family: 'Orbitron', sans-serif;
+font-family: 'Russo One', sans-serif;
+*/
+
+@media screen and (max-height: 780px)
+{
+    footer {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 576px)
+{
+    .calculator-container {
+        margin-left: 6rem;
+        margin-right: 6rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .output-screen .first-operand {
+        font-size: 1.4rem;
+    }
+    
+    .output-screen .second-operand {
+        font-size: 1.7rem;
+    }
+}
+
+@media screen and (min-width: 768px)
+{
+    .calculator-container {
+        margin-left: 10rem;
+        margin-right: 10rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .output-screen .first-operand {
+        font-size: 1.7rem;
+    }
+    
+    .output-screen .second-operand {
+        font-size: 2rem;
+    }
+
+    .background-box {
+        width: 60px;
+        height: 60px;
+        font-size: 2.5rem;
+    }
+    
+    .icon p{
+        font-size: 2.5rem;
+    }  
+}
+
+@media screen and (min-width: 992px)
+{
+    .calculator-container {
+        margin-left: 15rem;
+        margin-right: 15rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .output-screen .first-operand {
+        font-size: 1.7rem;
+    }
+    
+    .output-screen .second-operand {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (min-width: 1200px)
+{
+    main {
+        flex-direction: row;
+    }
+
+    .icon {
+        flex: 1;
+        padding-left: 8rem;
+        padding-top: 25rem;
+    }
+
+    .calculator-container {
+        flex: 2;
+        margin-left: 10rem;
+        margin-right: 10rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-top: 2rem;
+        margin-top: 10rem;
+    }
+}
+
+@media screen and (min-width: 1500px)
+{
+    
+    .icon {
+        padding-left: 10rem;
+    }
+
+    .background-box {
+        width: 80px;
+        height: 80px;
+        font-size: 3.4rem;
+    }
+    
+    .icon p{
+        font-size: 3.4rem;
+    }  
+
+    .calculator-container {
+        margin-left: 18rem;
+        margin-right: 18rem;
+        padding-left: 3.5rem;
+        padding-right: 3.5rem;
+    }
+}
